@@ -1,0 +1,138 @@
+.main-container {
+  height: auto;
+  background-color: #1a2438;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 50px;
+  background-image: url('./../../../assets/img/GReen\ shadow.png');
+  background-repeat: no-repeat;
+  background-position: left ;
+
+  .projects {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-image: url("./../../../assets/img/Vector\ 4.png");
+    background-repeat: no-repeat;
+    background-position: center;
+
+    .project-1,
+    .project-2,
+    .project-3 {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+     
+
+      img {
+        width: 550px;
+        height: 400px;
+   
+      }
+
+      .project-txt {
+        color: white;
+        text-align: center;
+        
+
+
+        h1 {
+          font-size: 88px;
+          margin-bottom: 10px;
+        }
+
+        p {
+          font-size: 20px;
+          word-spacing: 12px;
+          width: 600px;
+        }
+      }
+    }
+
+    .join,
+    .game,
+    .portfolio {
+      margin-bottom: 270px;
+
+      .btns {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+
+        .github{
+          width: 150px;
+          height: 58px;
+          background-color: transparent;
+          color: white;
+          font-size: 23px;
+          font-weight: 400;
+          border-radius: 10px;
+          font-family: sans-serif;
+          cursor: pointer;
+          border: 1px solid #00BEE8;
+
+          &:hover {
+            background-color: #4B47FF;
+            transition: 0.5s ease;
+          }
+          &:not(:hover) {
+            background-color: transparent; /* Hintergrundfarbe, wenn nicht gehovert wird */
+            transition: 0.5s ease;
+          }
+        }
+
+        .test {
+          width: 150px;
+          height: 58px;
+          background-color: #4B47FF;
+          color: white;
+          font-size: 23px;
+          font-weight: 400;
+          border-radius: 10px;
+          font-family: sans-serif;
+          cursor: pointer;
+          border-style: none;
+
+          &:hover {
+            background-color: #00BEE8;
+            transition: 0.5s ease;
+          }
+          
+          &:not(:hover) {
+            background-color: #4B47FF; /* Hintergrundfarbe, wenn nicht gehovert wird */
+            transition: 0.5s ease;
+          }
+          
+        }
+      }
+    }
+  }
+
+  .header {
+    text-align: center;
+    margin-bottom: 50px;
+
+    hr {
+      border: 2px solid #4b47ff;
+      display: inline-block;
+      width: 30%;
+      position: relative;
+      left: -300px;
+      top: 130px;
+    }
+
+    h1 {
+      font-size: 90px;
+      font-weight: 700;
+      color: white;
+    }
+
+    p {
+      font-size: 18px;
+      font-weight: 400;
+      color: white;
+    }
+  }
+}

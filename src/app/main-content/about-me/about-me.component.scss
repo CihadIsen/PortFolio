@@ -1,0 +1,74 @@
+.main-container {
+  height: 100vh;
+  background-color: #131e30;
+  margin-top: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100vw;
+  background-image: url("./../../../assets/img/Vector.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .txt-section {
+    width: 700px;
+    height: 600px;
+    position: relative;
+    left: -100%; /* Startposition links außerhalb des Bildschirms */
+    transition: left 0.5s ease; /* Animationseigenschaften definieren */
+
+    .img-txt {
+      display: flex;
+      gap: 50px;
+      justify-content: space-around;
+      margin: 30px 0;
+      color: white;
+
+      img {
+        width: 50px;
+        height: 55px;
+      }
+    }
+
+    p {
+      color: white;
+      font-size: px;
+    }
+
+    h1 {
+      color: white;
+      font-size: 90px;
+      font-weight: 700;
+      margin-bottom: 30px;
+    }
+  }
+
+  .img-section {
+    position: relative;
+    right: -100%;
+    transition: right 1.5s ease;
+    background-image: url("./../../../assets/img/Group 2.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    img {
+      width: 550px;
+      height: 550px;
+      position: relative;
+      z-index: 2;
+    }
+  }
+
+  &.active {
+    .txt-section {
+      left: 0; /* Position der txt-section nach links verschieben */
+    }
+
+    .img-section {
+      right: 0; /* Position der img-section nach rechts verschieben */
+    }
+  }
+}
+
+
