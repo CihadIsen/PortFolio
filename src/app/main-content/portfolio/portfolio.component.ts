@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-portfolio',
@@ -8,35 +8,41 @@ import { Component } from '@angular/core';
   styleUrl: './portfolio.component.scss',
 })
 export class PortfolioComponent {
-  liveTestJoin() {
+
+  constructor(private elementRef: ElementRef) {}
+
+  liveTest(index: number) {
     const pageUrls = [
       'https://cihad-isen.developerakademie.net/JOIN/logIn.html',
       ' https://cihad-isen.developerakademie.net/elPolloLoco/index.html',
     ];
 
-    window.open(pageUrls[0], 'blank');
+    window.open(pageUrls[index], 'blank');
   }
 
-  liveTestLoco() {
-    const pageUrls = [
-      'https://cihad-isen.developerakademie.net/JOIN/logIn.html',
-      ' https://cihad-isen.developerakademie.net/elPolloLoco/index.html',
-    ];
 
-    window.open(pageUrls[1], 'blank');
+  githubTest(index: number) {
+    const pageUrls = ["https://github.com/CihadIsen/JOIN","https://github.com/CihadIsen/ElPolloLoco","https://github.com/CihadIsen/PortFolio"];
+
+    window.open(pageUrls[index], "blank")
   }
 
-  githubjoin() {
-    const pageUrls = ["https://github.com/CihadIsen/JOIN","https://github.com/CihadIsen/ElPolloLoco"];
+  @HostListener('window:scroll', ['$event'])
+  addActiveClassToSkillSection(event: Event) {
+    const skillSection =
+      this.elementRef.nativeElement.querySelector('.main-container');
+    const distanceFromTop = skillSection.offsetTop;
+    const scrollPosition = window.scrollY || window.pageYOffset;
+    const offset = 500;
 
-    window.open(pageUrls[0], "blank")
+    if (scrollPosition > distanceFromTop - offset) {
+      skillSection.classList.add('active');
+    } else {
+      skillSection.classList.remove('active');
+    }
   }
 
-  githubloco() {
-    const pageUrls = ["https://github.com/CihadIsen/JOIN","https://github.com/CihadIsen/ElPolloLoco"];
-
-    window.open(pageUrls[1], "blank")
-  }
+  
 
 
 
