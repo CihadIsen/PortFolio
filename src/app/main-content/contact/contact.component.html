@@ -1,0 +1,51 @@
+<div class="main-container">
+    <div class="header">
+        <h1>Contact</h1>
+        <hr>
+    </div>
+    <div class="contact-form">
+        <div class="contact-txt">
+            <hr>
+            <h2>Got a problem to solve?</h2>
+            <p>Contact me through this form, I am interested in hearing<br>
+                from you, knowing your ideas and contributing to your
+                projects with my work.
+                <br>
+                <br>Need a Frontend developer? <strong>Contact me!</strong>
+            </p>
+        </div>
+        <div class="contact-formular">
+            <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+                <label for="name"></label>
+                <input [(ngModel)]="contactData.name" type="text" id="name" #name="ngModel" name="name"
+                    placeholder="Your name" required [class.invalid]="!name.valid && name.touched">
+                @if(!name.valid && name.touched){
+                <span class="nameValidation">Please enter your name</span>
+                }
+
+
+                <label for="email"></label>
+                <input [(ngModel)]="contactData.email" #email="ngModel" type="email" id="email"
+                    [class.invalid]="!email.valid && email.touched" name="email" placeholder="Your email" required
+                    pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+                @if(!email.valid && email.touched){
+                <span class="emailValidation">Please enter your email</span>
+                }
+
+                <label for="message"></label>
+                <textarea #message="ngModel" [(ngModel)]="contactData.message" minlength="4" id="message" name="message"
+                    placeholder="Your message" required></textarea>
+                @if(!message.valid && message.touched){
+                <span class="messageValidation">Please enter a message</span>
+                }
+
+                <label for="readPrivacy"></label>
+                <input class="checkbox" type="checkbox" id="readPrivacy" name="readPrivacy">
+
+                <span class="checkmark"></span><span class="privacy-txt">I've read the <a href="#">privacy policy</a>
+                    and agree to the processing of my data as outlined.</span>
+                <button class="submit-btn" type="submit" value="Submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+</div>
