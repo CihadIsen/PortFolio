@@ -68,3 +68,10 @@ hr {
     font-size: 32px !important;
   }
 }
+
+@media screen and (min-width: 360px) and (max-width: 520px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+  }
+}

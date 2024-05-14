@@ -12,18 +12,26 @@ import { FormsModule, NgForm } from '@angular/forms';
 })
 export class ContactComponent {
 
+  isChecked: boolean = false;
+
+  toggleCheckbox() {
+    this.isChecked = !this.isChecked;
+  }
+
+  
   http = inject(HttpClient);
 
-  mailTest = true;
+  mailTest = false;
 
   post = {
-    endPoint: 'https://deineDomain.de/sendMail.php',
+    endPoint: 'https://cihad-isen.de/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
         'Content-Type': 'text/plain',
-        responseType: 'text',
+       
       },
+      responseType: 'text',
     },
   };
 

@@ -16,6 +16,7 @@
         </div>
         <div class="contact-formular">
             <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+
                 <label for="name"></label>
                 <input [(ngModel)]="contactData.name" type="text" id="name" #name="ngModel" name="name"
                     placeholder="Your name" required [class.invalid]="!name.valid && name.touched">
@@ -40,9 +41,10 @@
                 }
 
                 <label for="readPrivacy"></label>
-                <input class="checkbox" type="checkbox" id="readPrivacy" name="readPrivacy">
+                <input class="checkbox" type="checkbox" id="readPrivacy" name="readPrivacy" (click)="toggleCheckbox()">
 
-                <span class="checkmark"></span><span class="privacy-txt">I've read the <a href="#">privacy policy</a>
+                <span class="checkmark" [class.checked]="isChecked"></span>
+                <span class="privacy-txt">I've read the <a href="impressum">privacy policy</a>
                     and agree to the processing of my data as outlined.</span>
                 <button class="submit-btn" type="submit" value="Submit">Send Message</button>
             </form>

@@ -13,8 +13,9 @@ export class PortfolioComponent {
 
   liveTest(index: number) {
     const pageUrls = [
-      'https://cihad-isen.developerakademie.net/JOIN/logIn.html',
-      ' https://cihad-isen.developerakademie.net/elPolloLoco/index.html',
+      'https://cihad-isen.de/Join/logIn.html',
+      'https://cihad-isen.de/ElPolloLoco/index.html',
+      'https://www.cihad-isen.de'
     ];
 
     window.open(pageUrls[index], 'blank');

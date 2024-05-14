@@ -3,9 +3,8 @@
   width: 100vw;
   background-color: #141d2f;
   font-family: sans-serif;
-  border: 1px solid white;
+  border: 1px solid #141d2f;
   justify-content: space-between;
-  
 
   .header {
     margin-top: 100px;
@@ -35,7 +34,6 @@
     width: 100%;
     display: flex;
     align-items: center;
-   
 
     .contact-txt {
       padding: 20px 100px;
@@ -65,7 +63,6 @@
     position: relative;
     margin: 0 auto;
 
-
     .nameValidation,
     .emailValidation {
       color: red;
@@ -81,11 +78,11 @@
     }
 
     .privacy-txt a {
-      color: #4B47FF;
+      color: #4b47ff;
       text-decoration: none;
 
       &:hover {
-        text-decoration: underline #4B47FF;
+        text-decoration: underline #4b47ff;
       }
     }
 
@@ -147,6 +144,7 @@
         position: absolute;
         opacity: 0;
       }
+
       .checkmark {
         background-image: url("./../../../assets/img/check_box_outline_blank.png"); /* Bild für die nicht ausgewählte Checkbox */
         background-size: cover;
@@ -164,6 +162,14 @@
           height: 18px;
           transform: scale(1.3);
         }
+
+        &.checked {
+          background-image: url("./../../../assets/img/check_box.png");
+          background-size: cover;
+          display: inline-block;
+          width: 18px;
+          height: 18px;
+        }
       }
     }
     .submit-btn {
@@ -177,7 +183,7 @@
       font-weight: 400;
       cursor: pointer;
       border: none;
-      box-shadow: 4 4 4 rgba(0,0,0,0) ;
+      box-shadow: 4 4 4 rgba(0, 0, 0, 0);
 
       &:hover {
         transform: scale(1.1);
@@ -186,45 +192,48 @@
   }
 }
 
-/*.contact-formular {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  margin: 0 auto;
+@media screen and (min-width: 360px) and (max-width: 520px) {
+  .main-container {
+    width: 100vw;
+    height: auto;
 
-  input {
-    width: 617px;
-    height: 40px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    border: 1px solid #4b47ff;
-    background-color: transparent;
-    padding: 5px 15px;
-    cursor: pointer;
-    color: white;
+   
 
-    &:hover {
-      border: 1px solid #00bee8;
+    .header {
+      font-size: 30px;
+      margin: 0 auto;
+
+      hr {
+        display: none;
+      }
     }
 
-    &::placeholder {
-      // Hier greifst du auf den Placeholder-Text zu
-      color: white; // Setze die Farbe des Placeholder-Textes
+    .contact-form {
+      width: 100vw;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contact-formular {
+      display: flex;
+      max-width: 400px;
+
+      form {
+        max-width: 400px;
+        padding: 10px;
+
+
+        input,
+        textarea {
+          width: calc(100% - 50px);
+        }
+
+        .privacy-txt {
+          margin: 0 auto;
+          padding: 0 10px;
+
+        }
+      }
     }
   }
-  textarea {
-    height: 200px;
-    width: 617px;
-    border: 1px solid #4b47ff;
-    background-color: transparent;
-    padding: 5px 15px;
-    cursor: pointer;
-    color: white;
-    border-radius: 10px;
-
-    &::placeholder {
-      color: white;
-    }
-
-  }
-}*/
+}

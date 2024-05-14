@@ -3,6 +3,11 @@
   width: 100vw;
   background-color: #141d2f;
 
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -154,6 +159,89 @@
 
     .arrow.animate {
       animation: arrowAnimation 2s infinite;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .main-section {
+    width: auto;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    .header {
+      display: flex;
+
+      .rotate {
+        font-size: 26px;
+        word-spacing: 2px;
+        position: static;
+      }
+
+      h1 {
+        font-size: 36px;
+        display: b;
+      }
+
+      h2 {
+        font-size: 30px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 360px) and (max-width: 520px) {
+  .main-section {
+    background-image: url('./../../../assets/img/Blue\ shadow\ 2.png');
+    background-position: calc(420px - 220px) ;
+    background-size: auto;
+    background-repeat: no-repeat;
+    height: 100vh;
+
+    &::before,
+    &::after {
+      content: none; // Entfernt das Pseudo-Element vollständig
+    }
+    .header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      h1 {
+        font-size: 41px;
+      }
+
+      h2 {
+        position: relative;
+        top: 100px;
+        margin-bottom: 80px;
+        font-size: 25px;
+      }
+    }
+
+    .links {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      
+
+      hr {
+        display: none;
+        background-color: #4b47ff;
+        width: 50%;
+      }
+    }
+
+    .scroll {
+     position: relative;
+     margin: auto;
+     right: auto;
+     
+
+      .scroll-txt {
+        display: none;
+      }
     }
   }
 }
