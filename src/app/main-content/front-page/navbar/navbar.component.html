@@ -1,14 +1,31 @@
-
 <nav class="navbar">
-    <a href="#front-page"><img src="./../../../assets/img/Logo.png" class="logo"></a>
-    <div class="navlinks">
-        <a href="#about">About me</a>
-        <a href="#skills">Skills</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#contact">Contact</a>
-        <div class="languages">
-            <a href="#">EN</a><br>
-            <a href="#">DE</a>
-        </div>
+  <a href="#front-page"><img src="./../../../assets/img/Logo.png" class="logo"></a>
+  <div class="navlinks" [class.active]="menuOpen">
+    <a href="#about">{{ 'About me' | translate }}</a>
+    <a href="#skills">{{ 'Skills' | translate }}</a>
+    <a href="#portfolio">{{ 'Portfolio' | translate }}</a>
+    <a href="#contact">{{ 'Contact' | translate }}</a>
+    <div class="languages">
+      <button class="languageBtns" *ngFor="let language of languages" (click)="changeLanguage(language)">
+        {{ language | translate }}
+      </button>
     </div>
+  </div>
+  <div class="hamburger" (click)="toggleMenu()">
+    <div class="burger-animation" #burgerAnimation>
+      <img src="./../../../../assets/img/complete burger.png" class="burger-img complete">     
+      <img src="./../../../../assets/img/finished Burger.png" class="burger-img finished">
+    </div>
+  </div>
 </nav>
+<div class="overlay" [class.show]="menuOpen">
+  <a href="#about">{{ 'About me' | translate }}</a>
+  <a href="#skills">{{ 'Skills' | translate }}</a>
+  <a href="#portfolio">{{ 'Portfolio' | translate }}</a>
+  <a href="#contact">{{ 'Contact' | translate }}</a>
+  <div class="languages">
+    <button class="languageBtns" *ngFor="let language of languages" (click)="changeLanguage(language)">
+      {{ language | translate }}
+    </button>
+  </div>
+</div>

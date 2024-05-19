@@ -48,9 +48,9 @@
 
     hr {
       display: inline-block;
-      width: 80%;
+      width: 40%;
       position: relative;
-      left: 290px;
+      left: 600px;
       top: 130px;
       border: 1px solid white;
     }
@@ -103,20 +103,20 @@
 @media screen and (min-width: 360px) and (max-width: 520px) {
   .main-container {
     width: 100vw;
-    height: 100vh;
+    height: 150vh;
     display: flex;
     flex-direction: column-reverse;
+    padding-top: 190px;
 
     .skill-logos {
       left: 0;
       display: block;
-      padding: 20px;
+      padding: 0 10px;
       display: flex;
       gap: 0;
       flex-wrap:wrap;
       justify-content: center;
-     
-      width: 100vw;
+     width: auto;
 
      img {
       width: 77px;
@@ -135,6 +135,7 @@
 
       h1 {
         text-align: center;
+        font-size: 50px;
       }
 
       hr {

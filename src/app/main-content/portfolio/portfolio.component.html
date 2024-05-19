@@ -1,9 +1,10 @@
 <div class="main-container">
     <div class="header">
-        <hr>
-        <h1>Portfolio</h1>
-        <p>This page is a sample of my work. Scroll down to view other projects i have developed.<br>
-            Feel free to try them out!
+        <!--<hr>-->
+        <h1>{{'Portfolio' | translate }}</h1>
+        <p>{{ "This page is a sample of my work. Scroll down to view other projects I have developed." | translate }}
+            <br>
+            {{'Feel free to try them out!' | translate}}
         </p>
     </div>
     <div class="projects">
@@ -12,9 +13,8 @@
                 <div class="project-txt">
                     <h1>Join</h1>
                     <p>HTML | CSS | Javascript</p>
-                    <p>Task manager inspired by the Kanban System. Create and organize tasks using
-                        drag and drop functions, assign users and categories. This project was
-                        developed by group work.
+                    <p>{{ "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories. This project was developed by group work." | translate }}
+
                     </p>
                     <div class="btns">
                         <button (click)="liveTest(0)" class="test">Live test</button>
@@ -31,8 +31,8 @@
                     <div class="project-txt">
                         <h1>El Pollo Loco</h1>
                         <p>HTML | CSS | Javascript | OOP</p>
-                        <p>A simple jump and run game built with JavaScript with an approach to object-oriented
-                            programming. Help Pepe Pelegrosso defeat the chicken boss and his minions.
+                        <p>{{ "A simple jump and run game built with JavaScript with an approach to object-oriented programming. Help Pepe defeat the chicken boss and his minions." | translate }}
+
                         </p>
                         <div class="btns">
                             <button (click)="liveTest(1)" class="test">Live test</button>
@@ -48,7 +48,7 @@
                     <div class="project-txt">
                         <h1>Portfolio</h1>
                         <p>Angular | SCSS | Typescript</p>
-                        <p>My Portfolio built with Angular and SCSS. 
+                        <p>{{ "My Portfolio built with Angular, SCSS and Typescript." | translate }}
                         </p>
                         <div class="btns">
                             <button (click)="liveTest(2)" class="test">Live test</button>

@@ -1,17 +1,18 @@
 <div class="main-container">
     <div class="header">
-        <h1>Contact</h1>
+        <h1>{{'Contact' | translate}} </h1>
         <hr>
     </div>
     <div class="contact-form">
         <div class="contact-txt">
             <hr>
-            <h2>Got a problem to solve?</h2>
-            <p>Contact me through this form, I am interested in hearing<br>
-                from you, knowing your ideas and contributing to your
-                projects with my work.
+            <h2>{{ "Got a problem to solve?" | translate }}</h2>
+            <p>{{'Contact me through this form, I am interested in hearing' | translate}}<br>
+                {{'from you, knowing your ideas and contributing to your' | translate }}
+                {{'projects with my work.' | translate}}'
                 <br>
-                <br>Need a Frontend developer? <strong>Contact me!</strong>
+                <br>{{'Need a Frontend developer?'| translate}}
+                <strong>{{'Contact me!' | translate}}</strong>
             </p>
         </div>
         <div class="contact-formular">
@@ -19,34 +20,38 @@
 
                 <label for="name"></label>
                 <input [(ngModel)]="contactData.name" type="text" id="name" #name="ngModel" name="name"
-                    placeholder="Your name" required [class.invalid]="!name.valid && name.touched">
+                    placeholder="{{ 'Your name' | translate }}" required [class.invalid]="!name.valid && name.touched"
+                    [class.isNameInvalid]="!name.valid && name.touched && !contactData.name">
+
                 @if(!name.valid && name.touched){
-                <span class="nameValidation">Please enter your name</span>
+                <span class="nameValidation">{{'Please enter your name' | translate }}</span>
                 }
 
 
                 <label for="email"></label>
                 <input [(ngModel)]="contactData.email" #email="ngModel" type="email" id="email"
-                    [class.invalid]="!email.valid && email.touched" name="email" placeholder="Your email" required
+                    [class.invalid]="!email.valid && email.touched" name="email"
+                    placeholder="{{ 'Your email' | translate}}" required
                     pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
                 @if(!email.valid && email.touched){
-                <span class="emailValidation">Please enter your email</span>
+                <span class="emailValidation">{{ 'Please enter your email' | translate }}</span>
                 }
 
                 <label for="message"></label>
                 <textarea #message="ngModel" [(ngModel)]="contactData.message" minlength="4" id="message" name="message"
-                    placeholder="Your message" required></textarea>
+                    placeholder="{{'Your message' | translate}}" required></textarea>
                 @if(!message.valid && message.touched){
-                <span class="messageValidation">Please enter a message</span>
+                <span class="messageValidation">{{'Please enter a message' | translate }} </span>
                 }
 
                 <label for="readPrivacy"></label>
-                <input class="checkbox" type="checkbox" id="readPrivacy" name="readPrivacy" (click)="toggleCheckbox()">
+                <input class="checkbox" type="checkbox" id="readPrivacy" name="readPrivacy"  (click)="toggleCheckbox()">
 
                 <span class="checkmark" [class.checked]="isChecked"></span>
-                <span class="privacy-txt">I've read the <a href="impressum">privacy policy</a>
-                    and agree to the processing of my data as outlined.</span>
-                <button class="submit-btn" type="submit" value="Submit">Send Message</button>
+                <span class="privacy-txt">
+                    {{"I've read the" | translate}} <a href="privacy">{{'privacy policy' | translate}}</a> {{'and agree to the processing of my data as outlined.' | translate}}</span>
+
+                <button class="submit-btn" [disabled]="!isFormValid(contactForm)" type="submit" value="Submit">{{ 'Send Message' | translate}}</button>
             </form>
         </div>
     </div>

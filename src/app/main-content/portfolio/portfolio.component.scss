@@ -50,12 +50,13 @@
     .join,
     .game,
     .portfolio {
-      margin-bottom: 270px;
+      margin-bottom: 180px;
 
       .btns {
         width: 100%;
         display: flex;
         justify-content: space-around;
+        margin-top: 20px;
 
         .github {
           width: 150px;
@@ -109,14 +110,14 @@
     text-align: center;
     margin-bottom: 50px;
 
-    hr {
+    /*hr {
       border: 2px solid #4b47ff;
       display: inline-block;
       width: 30%;
-      position: relative;
-      left: -300px;
-      top: 130px;
-    }
+      position: fixed;
+      left: -400px;
+      top: 160px;
+    }*/
 
     h1 {
       font-size: 90px;
@@ -135,73 +136,95 @@
 @media screen and (min-width: 360px) and (max-width: 520px) {
   .main-container {
     display: flex;
-    
     background-image: none;
+
+    .header {
+      h1 {
+        font-size: 50px;
+      }
+    }
 
     .projects {
       display: flex;
       background-image: none;
-    
+
       .join,
       .portfolio {
         display: flex;
         flex-direction: column-reverse;
         align-items: center;
-    
+
+        h1 {
+          font-size: 50px;
+        }
+
         .project-1,
         .project-2,
         .project-3 {
           display: flex;
           flex-direction: column-reverse;
-    
+          margin-bottom: 0;
+
           .btns {
             display: flex;
             justify-content: space-evenly;
             gap: 10px;
           }
-    
+
           .project-txt {
             padding: 10px;
             margin: 0 auto;
-    
+
+            h1 {
+              font-size: 50px;
+            }
+
             p {
               width: auto;
             }
           }
-    
+
           img {
             width: 250px;
             height: 250px;
           }
         }
       }
-    
+
       .loco {
         display: flex;
         flex-direction: column; // Nur für loco
         align-items: center;
-    
+
         .project-1,
         .project-2,
         .project-3 {
           display: flex;
           flex-direction: column; // Nur für loco
-    
+
           .btns {
             display: flex;
             justify-content: space-evenly;
             gap: 10px;
           }
-    
+
+          h1 {
+            font-size: 50px;
+          }
+
           .project-txt {
             padding: 10px;
             margin: 0 auto;
-    
+
+            h1 {
+              font-size: 50px;
+            }
+
             p {
               width: auto;
             }
           }
-    
+
           img {
             width: 250px;
             height: 250px;

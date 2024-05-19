@@ -1,0 +1,66 @@
+.navbar {
+    position: fixed;
+    top: 0;
+}
+
+.privacy {
+    background-color: #1C273B ;
+    height: auto;
+    width: 100vw;
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    max-width: 100vw;
+    margin: 0 auto;
+
+    a {
+        color: white;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+   
+
+    h1 {
+        color: white;
+        font-size: 90px;
+        text-align: center;
+    }
+
+    ul {
+        color: white;
+
+        li {
+            color: white;
+        }
+    }
+
+    h2, h3, h4 {
+        color: white;
+        font-size: 90px;
+        text-align: center;
+    }
+
+    p {
+        color: white;
+        text-align: center;
+        font-size: 22px;
+        padding: 0 22px;
+    }
+}
+
+@media screen and (min-width: 360px) and (max-width: 520px){
+    .privacy {
+        width: 100%;
+
+        h1,h2,h3,h4 {
+            font-size: 35px;
+        }
+    }
+
+    .navbar {
+        width: 100%;
+    }
+}

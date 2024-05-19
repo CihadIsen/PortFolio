@@ -1,0 +1,48 @@
+{
+    "About me": "Über mich",
+    "Skills": "Fähigkeiten",
+    "Portfolio": "Projekte",
+    "Contact": "Kontakt",
+    "Let's Talk!": "Kontakt",
+    "Hi, I am Cihad Isen, a Frontend Developer based in Berlin, Germany.": "Hallo, ich bin Cihad Isen, ein Frontend-Entwickler mit Sitz in Berlin, Deutschland",
+    "During my training at the Developer Academy, I was able to acquire the necessary skills in frontenddevelopment through well-structured and intensive projects." : "Während meiner Ausbildung an der Developer Academy konnte ich durch gut strukturierte und intensive Projekte die notwendigen Fähigkeiten im Bereich Frontend-Entwicklung erwerben. ",
+    "These skills were further strengthened in some larger projects, where I collaborated with a team, enhancing my communication and teamwork abilities.": "Diese Fähigkeiten wurden in einigen größeren Projekten weiter gestärkt, in denen ich mit einem Team zusammengearbeitet habe und dabei meine Kommunikations- und Teamfähigkeiten verbessern konnte.",
+    "Customer interaction has always been familiar to me, allowing me to develop considerable patience in dealing with people over the years. During my training, I also worked intensively to meet the strict project requirements in every free moment, which further heightened my ability to work under pressure.": "Kundenumgang war mir schon immer vertraut und ermöglichte es mir, im Laufe der Jahre eine beträchtliche Geduld im Umgang mit Menschen zu entwickeln. Während meiner Ausbildung habe ich auch intensiv gearbeitet, um in jeder freien Minute die strengen Projektanforderungen zu erfüllen, was meine Fähigkeit, unter Druck zu arbeiten, weiter verbessert hat.",
+    "Through discipline and perseverance, I have strengthened my skills in HTML, CSS, and JavaScript, as well as working with Angular, during the course of my training. This enabled me to create, among other things, a task management tool and a small game, both of which you can see for yourself.": "Durch Disziplin und Ausdauer habe ich im Laufe meiner Ausbildung meine Fähigkeiten in HTML, CSS und JavaScript sowie im Umgang mit Angular gestärkt. Dies hat es mir ermöglicht, unter anderem ein Aufgabenverwaltungstool und ein kleines Spiel zu erstellen, die Sie sich beide selbst ansehen können.",
+    "I am always eager to continue learning and expanding my experiences. As the world and technology evolve, so do I!": "Ich bin immer bestrebt, weiter zu lernen und meine Erfahrungen zu erweitern. So wie sich die Welt und die Technologie entwickeln, entwickle auch ich mich weiter!",
+    "I have gained experience in building projects with various front end technologies and concepts.": "Ich habe Erfahrung im Aufbau von Projekten mit verschiedenen Frontend-Technologien und Konzepten gesammelt.",
+    "Get in touch" : "Kontakt",
+    "This page is a sample of my work. Scroll down to view other projects I have developed.": "Diese Seite ist ein Beispiel meiner Arbeit. Scrollen Sie nach unten, um weitere Projekte zu sehen, die ich entwickelt habe.",
+    "Feel free to try them out!" : "Probieren Sie sie gerne aus!",
+    "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories. This project was developed by group work.": "Task-Manager inspiriert vom Kanban-System. Erstellen und organisieren Sie Aufgaben mithilfe von Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu. Dieses Projekt wurde in einer Gruppenarbeit entwickelt.",
+    "A simple jump and run game built with JavaScript with an approach to object-oriented programming. Help Pepe defeat the chicken boss and his minions.": "Ein einfaches Jump-and-Run-Spiel, das mit JavaScript und einem objektorientierten Ansatz entwickelt wurde. Helfen Sie Pepe, den Hühnerboss und seine Schergen zu besiegen.",
+    "My Portfolio built with Angular, SCSS and Typescript.": "Mein Portfolio, erstellt mit Angular, SCSS und Typescript.",
+    "Got a problem to solve?" : "Gibt es ein Problem zu lösen?",
+    "Contact me through this form, I am interested in hearing": "Kontaktieren Sie mich über dieses Formular. Ich bin daran interessiert,",
+    "from you, knowing your ideas and contributing to your" : "von Ihnen zu hören, Ihre Ideen kennenzulernen und",
+    "projects with my work." : "zu Ihren Projekten beizutragen.",
+    "Need a Frontend developer?" : "Sie benötigen einen Frontend-Entwickler?",
+    "Contact me!" : "Kontaktieren Sie mich!",
+    "Your name" : "Ihr Name",
+    "Your email" : "Ihre E-Mail",
+    "Your message" : "Ihre Nachricht",
+    "Please enter your name" : "Ihr Name ist erforderlich",
+    "Please enter your email" : "Ihre E-Mail ist erforderlich",
+    "Please enter a message" : "Ihre Nachricht ist leer",
+    "Send Message" : "Nachricht senden",
+    "I've read the" : "Ich habe die",
+    "privacy policy" : "Datenschutzerklärung",
+    "and agree to the processing of my data as outlined." : "gelesen und stimme der Verarbeitung meiner Daten zu."
+    
+
+    
+
+
+
+
+   
+
+
+
+
+}
