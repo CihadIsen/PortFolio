@@ -4,6 +4,8 @@ import { FormsModule, NgForm } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { RouterModule } from '@angular/router';
+import { PrivacyPolicyComponent } from '../../shared/privacy-policy/privacy-policy.component';
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient, './assets/il8n/', '.json');
@@ -12,7 +14,7 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [FormsModule, TranslateModule, CommonModule],
+  imports: [FormsModule, TranslateModule, CommonModule, RouterModule, PrivacyPolicyComponent],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })

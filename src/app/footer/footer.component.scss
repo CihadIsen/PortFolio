@@ -14,6 +14,30 @@ hr {
   justify-content: space-around;
   align-items: center;
 
+  .name-imp {
+    .impressum-link {
+      color: white;
+      text-decoration: none;
+
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        width: calc(100% - 16px);
+        height: 2px;
+        background-color: skyblue;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+      }
+      &:hover::after {
+        opacity: 1;
+      }
+    }
+  }
+
   span {
     color: white;
     font-size: 40px;
@@ -24,26 +48,7 @@ hr {
     left: -15px;
     cursor: pointer;
   }
-  .imp {
-    text-decoration: none;
-    color: white;
-    position: relative;
-
-    &::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -5px;
-      width: calc(100% - 16px);
-      height: 2px;
-      background-color: skyblue;
-      opacity: 0;
-      transition: opacity 0.5s ease;
-    }
-    &:hover::after {
-      opacity: 1;
-    }
-  }
+  
   .links {
     display: flex;
     gap: 30px;

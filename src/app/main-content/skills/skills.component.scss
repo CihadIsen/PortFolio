@@ -100,6 +100,39 @@
   }
 }
 
+@media screen and (min-width: 520px) and (max-width: 1400px) {
+  .main-container {
+    display: flex;
+    width: 100vw;
+    flex-direction: column-reverse;
+    height: 120vh;
+
+    .skill-logos {
+      left: 0;
+      display: flex;
+      flex-wrap: wrap;
+      padding: 10px;
+      justify-content: center;
+      
+      gap: 0;
+      
+    }
+
+    .skill-txt{
+      right: 0;
+      h1 {
+        text-align: center;
+        margin-top: 50px;
+        font-size: 55px;
+      }
+
+      .getInTouch {
+        margin: 50px auto;
+      }
+    }
+  }
+}
+
 @media screen and (min-width: 360px) and (max-width: 520px) {
   .main-container {
     width: 100vw;
@@ -114,15 +147,14 @@
       padding: 0 10px;
       display: flex;
       gap: 0;
-      flex-wrap:wrap;
+      flex-wrap: wrap;
       justify-content: center;
-     width: auto;
+      width: auto;
 
-     img {
-      width: 77px;
-      height: 77px;
-     }
-      
+      img {
+        width: 77px;
+        height: 77px;
+      }
     }
 
     .skill-txt {

@@ -108,7 +108,7 @@
 
   .header {
     text-align: center;
-    margin-bottom: 50px;
+   margin: 50px auto;
 
     /*hr {
       border: 2px solid #4b47ff;
@@ -132,6 +132,112 @@
     }
   }
 }
+@media screen and (min-width: 520px) and (max-width: 1200px){
+
+  .main-container{
+    display: flex;
+    background-image: none;
+    height: auto;
+
+    .projects{
+      display: flex;
+      background-image: none;
+
+      .join,
+      .portfolio {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+
+        h1 {
+          font-size: 50px;
+        }
+
+        .project-1,
+        .project-2,
+        .project-3 {
+          display: flex;
+          flex-direction: column-reverse;
+          margin-bottom: 0;
+
+          .btns {
+            display: flex;
+            justify-content: space-evenly;
+          }
+
+          .project-txt {
+            padding: 10px;
+            margin: 0 auto;
+
+            h1 {
+              font-size: 50px;
+            }
+
+            p {
+              width: auto;
+            }
+          }
+
+          img {
+            width: 250px;
+            height: 250px;
+          }
+        }
+      }
+      
+    }
+
+    .loco {
+      display: flex;
+      flex-direction: column; // Nur für loco
+      align-items: center;
+
+      .project-1,
+      .project-2,
+      .project-3 {
+        display: flex;
+        flex-direction: column; // Nur für loco
+
+        .btns {
+          display: flex;
+          justify-content: space-evenly;
+          
+        }
+
+        h1 {
+          font-size: 50px;
+        }
+
+        .project-txt {
+          padding: 10px;
+          margin: 0 auto;
+
+          h1 {
+            font-size: 50px;
+          }
+
+          p {
+            width: auto;
+          }
+        }
+
+        img {
+          width: 250px;
+          height: 250px;
+        }
+      }
+    }
+
+    .header {
+      margin-top: 50px;
+      text-align: center;
+      h1{
+        font-size: 55px;
+        text-align: center;
+      }
+    }
+  }
+}
 
 @media screen and (min-width: 360px) and (max-width: 520px) {
   .main-container {
@@ -141,8 +247,10 @@
     .header {
       h1 {
         font-size: 50px;
+        margin-top: 50px;
       }
     }
+    
 
     .projects {
       display: flex;
@@ -190,6 +298,7 @@
           }
         }
       }
+      
 
       .loco {
         display: flex;

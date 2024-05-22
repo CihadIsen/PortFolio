@@ -19,12 +19,16 @@
             <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
 
                 <label for="name"></label>
-                <input [(ngModel)]="contactData.name" type="text" id="name" #name="ngModel" name="name"
+                <input [(ngModel)]="contactData.name" type="text" id="name" #name="ngModel" name="name" minlength="3"
                     placeholder="{{ 'Your name' | translate }}" required [class.invalid]="!name.valid && name.touched"
                     [class.isNameInvalid]="!name.valid && name.touched && !contactData.name">
 
                 @if(!name.valid && name.touched){
                 <span class="nameValidation">{{'Please enter your name' | translate }}</span>
+                }
+                @if(name.errors?.['minlength']){
+                    <span class="nameValidation">{{'Name must be at least 3 characters long' | translate}}</span>
+
                 }
 
 
@@ -49,7 +53,7 @@
 
                 <span class="checkmark" [class.checked]="isChecked"></span>
                 <span class="privacy-txt">
-                    {{"I've read the" | translate}} <a href="privacy">{{'privacy policy' | translate}}</a> {{'and agree to the processing of my data as outlined.' | translate}}</span>
+                    {{"I've read the" | translate}} <a routerLink="/privacy">{{'privacy policy' | translate}}</a> {{'and agree to the processing of my data as outlined.' | translate}}</span>
 
                 <button class="submit-btn" [disabled]="!isFormValid(contactForm)" type="submit" value="Submit">{{ 'Send Message' | translate}}</button>
             </form>

@@ -32,7 +32,8 @@
     "Send Message" : "Nachricht senden",
     "I've read the" : "Ich habe die",
     "privacy policy" : "Datenschutzerklärung",
-    "and agree to the processing of my data as outlined." : "gelesen und stimme der Verarbeitung meiner Daten zu."
+    "and agree to the processing of my data as outlined." : "gelesen und stimme der Verarbeitung meiner Daten zu.",
+    "Name must be at least 3 characters long" : "Name muss mind. 3 Buchstaben enthalten"
     
 
     

@@ -7,6 +7,7 @@
   background-color: #121e34;
   position: fixed;
   z-index: 999;
+  border: 1px solid white;
 
   img {
     position: relative;
@@ -24,6 +25,7 @@
     gap: 30px;
     flex-direction: row;
     height: 24px;
+    
 
     .languageBtns {
       color: white;
@@ -126,8 +128,6 @@
       &.animate .finished {
         opacity: 1;
       }
-
-     
     }
   }
 }
@@ -162,7 +162,7 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    
+
     .languageBtns {
       color: white;
       font-size: 23px;
@@ -200,13 +200,63 @@
   }
 }
 
-@media screen and (max-width: 1200px) {
-  
+/*@media screen and  (max-width: 1220px) {
+  .navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .navlinks {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}*/
+
+@media  screen and (min-width: 880px) and (max-width: 1200px) {
+  .navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    
+
+    .navlinks {
+      gap: 10px;
+      display: flex;
+      justify-content: center;
+      
+    }
+  }
+}
+
+@media  screen and (min-width: 520px) and (max-width: 880px) {
+  .navbar {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: 100%;
+    
+    
+    .logo {
+      position: relative;
+      left: -230px;
+    }
+
+    .navlinks {
+      gap: 10px;
+      display: flex;
+      justify-content: center;
+      position:fixed;
+      left: 70px;  
+      
+    }
+  }
 }
 
 @media screen and (min-width: 360px) and (max-width: 520px) {
   .navbar {
-  
     display: flex;
     justify-content: space-evenly;
     position: fixed;

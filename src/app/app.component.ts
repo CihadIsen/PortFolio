@@ -7,6 +7,7 @@ import { ImpressumComponent } from './shared/impressum/impressum.component';
 import { PrivacyPolicyComponent } from './shared/privacy-policy/privacy-policy.component';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
+
 @Component({
   selector: 'app-root',
   standalone: true,
