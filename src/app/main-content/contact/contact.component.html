@@ -1,19 +1,19 @@
 <div class="main-container">
     <div class="header">
         <h1>{{'Contact' | translate}} </h1>
-        <hr>
+        
     </div>
     <div class="contact-form">
         <div class="contact-txt">
-            <hr>
+           <!--<hr>--> 
             <h2>{{ "Got a problem to solve?" | translate }}</h2>
             <p>{{'Contact me through this form, I am interested in hearing' | translate}}<br>
-                {{'from you, knowing your ideas and contributing to your' | translate }}
-                {{'projects with my work.' | translate}}'
+            <p>{{'from you, knowing your ideas and contributing to your' | translate }}</p>
+            <p>{{'projects with my work.' | translate}}'</p>
                 <br>
-                <br>{{'Need a Frontend developer?'| translate}}
-                <strong>{{'Contact me!' | translate}}</strong>
-            </p>
+            <p> <br>{{'Need a Frontend developer?'| translate}}</p>
+            <p> <strong>{{'Contact me!' | translate}}</strong></p>
+           
         </div>
         <div class="contact-formular">
             <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
@@ -57,6 +57,11 @@
 
                 <button class="submit-btn" [disabled]="!isFormValid(contactForm)" type="submit" value="Submit">{{ 'Send Message' | translate}}</button>
             </form>
+           
         </div>
     </div>
+    <div class="goToTop">
+     <button class="toTop" (click)="toTop()"></button>
+     <button class="none"></button>
+</div>
 </div>

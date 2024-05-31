@@ -1,18 +1,29 @@
 .navbar {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 100vw;
-  height: 110px;
-  background-color: #121e34;
-  position: fixed;
-  z-index: 999;
-  border: 1px solid white;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 110px;
+    background-color: #141D2F;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 1440px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 0; /* Optional: für etwas Innenabstand */
+    overflow: hidden; /* Verhindert, dass der Inhalt überläuft */
 
-  img {
-    position: relative;
-    left: -55px;
-  }
+    &.fixed {
+      position: fixed;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+    }
+}
 
   .logo {
     width: 90px;
@@ -22,40 +33,49 @@
     color: white;
     text-decoration: none;
     display: flex;
-    gap: 30px;
+    margin-left: 0;
+    width: auto;
+    align-items: center;
     flex-direction: row;
     height: 24px;
+    justify-content: flex-end;
+    gap: 40px;
     
+    box-sizing: border-box;
 
-    .languageBtns {
-      color: white;
-      font-size: 23px;
-      font-weight: 400;
-      background-color: transparent;
-      position: relative;
-      left: 150px;
+    .languages {
       display: flex;
-      bottom: 15px;
-      cursor: pointer;
-      border-style: none;
+      justify-content: center;
+      flex-direction: column;
 
-      &:hover {
-        color: rgb(0, 190, 232);
-        transition: 0.5s ease;
-      }
+      .languageBtns {
+        color: white;
+        font-size: 23px;
+        font-weight: 400;
+        background-color: transparent;
 
-      &:focus {
-        color: rgb(0, 190, 232);
+        display: flex;
+        bottom: 15px;
+        cursor: pointer;
+        border-style: none;
 
-        &::after {
-          opacity: 1;
+        &:hover {
+          color: rgb(0, 190, 232);
+          transition: 0.5s ease;
+        }
+
+        &:focus {
+          color: rgb(0, 190, 232);
+
+          &::after {
+            opacity: 1;
+          }
         }
       }
     }
-
     .languages a {
       position: relative;
-      bottom: 10px;
+      bottom: 50px;
     }
 
     a {
@@ -63,8 +83,7 @@
       font-size: 23px;
       font-weight: 400;
       text-decoration: none;
-      position: relative;
-      left: 150px;
+      
 
       &:hover {
         color: rgb(0, 190, 232);
@@ -130,7 +149,7 @@
       }
     }
   }
-}
+
 
 .overlay {
   display: none;
@@ -140,7 +159,7 @@
   position: fixed;
   top: 0;
   right: 0;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background-color: rgba(18, 30, 52, 0.95);
   z-index: 998;
@@ -199,73 +218,19 @@
     }
   }
 }
-
-/*@media screen and  (max-width: 1220px) {
+@media (min-width: 575.98px) and (max-width: 767.98px) {
   .navbar {
     display: flex;
-    justify-content: center;
-    align-items: center;
-
-    .navlinks {
-      display: flex;
-      justify-content: center;
-    }
-  }
-}*/
-
-@media  screen and (min-width: 880px) and (max-width: 1200px) {
-  .navbar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    
-
-    .navlinks {
-      gap: 10px;
-      display: flex;
-      justify-content: center;
-      
-    }
-  }
-}
-
-@media  screen and (min-width: 520px) and (max-width: 880px) {
-  .navbar {
-    display: flex;
-    justify-content: center;
-    flex-wrap: nowrap;
-    align-items: center;
-    width: 100%;
-    
-    
-    .logo {
-      position: relative;
-      left: -230px;
-    }
-
-    .navlinks {
-      gap: 10px;
-      display: flex;
-      justify-content: center;
-      position:fixed;
-      left: 70px;  
-      
-    }
-  }
-}
-
-@media screen and (min-width: 360px) and (max-width: 520px) {
-  .navbar {
-    display: flex;
-    justify-content: space-evenly;
-    position: fixed;
+    justify-content: space-around;
     height: 110px;
     top: 0;
     margin: 0;
+    width: 100%;
 
     .overlay {
       margin: 0;
+      height: 100%;
+      width: 100%;
     }
 
     .navlinks {
@@ -277,3 +242,120 @@
     }
   }
 }
+
+@media screen and (min-width: 320px) and  (max-width: 575.98px) {
+  .navbar {
+    display: flex;
+    justify-content: space-around;
+    height: 110px;
+    top: 0;
+    z-index: 999;
+    margin: 0;
+    //width: 92%;
+
+    .overlay {
+      margin: 0;
+      height: 100%;
+      width: 100%;
+    }
+
+    .navlinks {
+      display: none;
+    }
+
+    .hamburger {
+      display: flex;
+    }
+  }
+}
+
+@media (min-width: 767.98px) and (max-width: 991.98px) {
+  .navbar {
+    display: flex;
+    justify-content: space-around;
+    height: 110px;
+    top: 0;
+    z-index: 999;
+    margin: 0;
+    width: 100%;
+
+    .overlay {
+      margin: 0;
+      height: 100%;
+      width: 100%;
+    }
+
+    .navlinks {
+      display: none;
+    }
+
+    .hamburger {
+      display: flex;
+    }
+  }
+}
+/*@media screen and (min-width:2000px) and (max-width: 4000px){
+  .navbar{
+    display: flex;
+   // justify-content: space-evenly;
+    align-items: center;
+    width:100%;
+    //position: fixed;
+    //max-width: 4000px;
+    margin: 0 auto;
+    z-index: 999;
+  }
+}*/
+
+@media (min-width: 991.98px) and (max-width: 1199.98px) {
+  .navbar {
+    display: flex;
+    justify-content: space-around;
+    height: 110px;
+    top: 0;
+    margin: 0;
+    width: 100%;
+
+    .overlay {
+      margin: 0;
+      height: 100%;
+      width: 100%;
+    }
+
+    .navlinks {
+      display: flex; /* Geändert, um Navigation auf großen Bildschirmen anzuzeigen */
+    }
+
+    .hamburger {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 1199.98px) and (max-width: 1540px) {
+  .navbar {
+    display: flex;
+    justify-content: space-around;
+    height: 110px;
+    top: 0;
+    margin: 0;
+    width: 100%;
+
+    .overlay {
+      margin: 0;
+      height: 100%;
+      width: 100%;
+    }
+
+    .navlinks {
+      display: flex; /* Geändert, um Navigation auf großen Bildschirmen anzuzeigen */
+    }
+
+    .hamburger {
+      display: none;
+    }
+  }
+}
+
+
+

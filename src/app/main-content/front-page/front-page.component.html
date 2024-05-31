@@ -1,12 +1,12 @@
 <app-navbar></app-navbar>
 <div class="main-section">
     <div class="header">
-        <h1><span class="rotate">I am</span> Cihad Isen</h1>
-        <h2>FRONTEND DEVELOPER</h2>
+        <h1><span class="rotate">{{'I am' | translate}}</span> Cihad Isen</h1>
+        <h2>FRONTEND {{'DEVELOPER' | translate}}</h2>
     </div>
-    <button class="talk-btn"><a href="#contact">{{ "Let's Talk!" | translate }}</a></button>
+    <button class="talk-btn"><a href="#contact"> {{"Let's Talk!" | translate }} </a></button>
 
-    
+    <div class="bottom-section">
     <div class="links">
         <hr>
         <a href="https://github.com/CihadIsen" target="_blank"><img src="./../../assets/img/Github button.png" alt="github-btn"></a>
@@ -15,7 +15,8 @@
     </div>
     <div class="scroll">
         <span class="arrow animate">→</span>
-        <span class="scroll-txt">Scroll Down </span>
+        <span class="scroll-txt">{{'Scroll Down' | translate}} </span>
         
     </div>
+</div>
 </div>

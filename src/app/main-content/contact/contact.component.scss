@@ -1,32 +1,63 @@
 .main-container {
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   background-color: #141d2f;
   font-family: sans-serif;
-  border: 1px solid #141d2f;
+  
   justify-content: space-between;
+  max-width: 1440px;
+  margin: 30px auto;
+
+  .goToTop {
+    display: flex;
+    justify-content: flex-end;
+   
+    align-items: center;
+    margin-top: 50px;
+
+    .none {
+      display: none;
+    }
+    .toTop {
+      background-image: url("./../../../assets/img/Go\ up\ button.png");
+      background-position: center;
+      width: 40px;
+      height: 40px;
+      background-color: transparent;
+      border: 1px solid white;
+      border-radius: 50%;
+      margin-bottom:15px;
+
+      cursor: pointer;
+
+      &:hover {
+        background-image: url("./../../../assets/img/Go\ up\ button\ hover.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        border-color: transparent;
+      }
+    }
+  }
 
   .header {
     margin-top: 100px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    flex-direction: column;
+    justify-content: center;
+    flex-direction: row;
     margin-bottom: 40px;
+    text-align: center;
 
-    hr {
-      border: 2px solid #4b47ff;
-      display: inline;
-      width: 38%;
-      position: relative;
-      left: 580px;
-      bottom: 50px;
-    }
+    /* hr {
+        border: 2px solid #4b47ff;
+        width: 100px;
+        margin-left: 40px;
+    } */
 
     h1 {
       color: white;
       font-size: 90px;
-      text-align: center;
+      margin: 0; /* Entfernt standardmäßige Margins */
     }
   }
 
@@ -34,19 +65,22 @@
     height: auto;
     width: 100%;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    justify-content: space-between;
 
     .contact-txt {
-      padding: 20px 100px;
+     
+      text-align: center;
+      margin: 0 auto;
 
-      hr {
+      /* hr {
         display: inline-block;
         position: relative;
         width: 12%;
         border: 2px solid #1ce6b6;
         top: 80px;
         right: 100px;
-      }
+      } */
 
       h2 {
         font-size: 32px;
@@ -106,7 +140,7 @@
         border-radius: 10px;
         border: 1px solid #4b47ff;
         background-color: transparent;
-        padding: 5px 15px;
+        //padding: 8px 0 8px 4px;
         cursor: pointer;
         color: white;
 
@@ -121,6 +155,7 @@
 
         &::placeholder {
           color: white; // Setze die Farbe des Placeholder-Textes
+          padding: 8px;
         }
       }
 
@@ -129,25 +164,28 @@
         width: 617px;
         border: 1px solid #4b47ff;
         background-color: transparent;
-        padding: 5px 15px;
+        //padding: 8px 0 8px 4px;
         cursor: pointer;
         color: white;
         border-radius: 10px;
 
         &::placeholder {
           color: white;
+          padding: 8px;
         }
 
         &:hover {
           border: 1px solid #00bee8;
+          
         }
       }
       .checkbox {
         position: relative;
         border: 1px solid white;
-        top: 68px;
-        width: 20px;
-
+        top: 59px;
+        width: 19px;
+        height: 19px;
+        right: 4px;
         opacity: 0;
       }
 
@@ -204,50 +242,30 @@
   }
 }
 
-@media screen and (min-width: 520px) and (max-width: 1400px) {
+
+@media screen and (min-width: 992px) and (max-width: 1440px) {
   .main-container {
-    margin: 0;
-    width: 100vw;
+    margin: 0 auto;
+    width: 100%;
     height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-    .header {
-      h1 {
-        font-size: 55px;
-        margin-top: 10px;
-      }
-
-      hr {
-        display: none;
-      }
+    .toTop {
+      left: 0;
+      position: relative;
+      margin: 50px auto;
     }
-
-    .contact-form {
-      width: 100vw;
-      display: flex;
-      flex-direction: column;
-      padding: 20px;
-
-      .contact-txt {
-        hr {
-          display: none;
-        }
-      }
-    }
-  }
-}
-
-@media screen and (min-width: 360px) and (max-width: 520px) {
-  .main-container {
-    margin: 0;
-    width: 100vw;
-    height: auto;
 
     .header {
       font-size: 30px;
-      margin: 0 auto;
+      margin: 10px auto;
+      text-align: center;
 
       h1 {
         font-size: 50px;
+        margin-bottom: 20px;
       }
 
       hr {
@@ -256,13 +274,28 @@
     }
 
     .contact-form {
-      width: 100vw;
+      width: 100%;
       display: flex;
       flex-direction: column;
-      max-width: 400px;
-      padding: 0;
+      align-items: center;
+      
 
       .contact-txt {
+        width: 100%;
+        padding: 0 20px;
+        margin: 20px 50px;
+        text-align: center;
+
+        h2 {
+          max-width: 800px;
+          margin: 0 auto;
+        }
+        p{
+          max-width: 800px;
+          margin: 10px auto;
+          
+        }
+
         hr {
           display: none;
         }
@@ -273,21 +306,339 @@
       display: flex;
       max-width: 400px;
 
+      .nameValidation,
+      .emailValidation,
+      .messageValidation {
+        position: relative;
+        top: 5px;
+        left: 10px;
+      }
+
       form {
-        max-width: 100vw;
-        padding: 10px;
+        max-width: 100%;
+        padding: 5px;
+
+        .checkbox {
+          position: relative;
+          right: 187px;
+          height: 19px;
+          width: 19px;
+          top: 48px;
+        }
 
         input,
         textarea {
-          width: calc(100% - 50px);
+          width: 100%;
+          max-width: 800px;
+          margin: 10px auto;
         }
 
         .privacy-txt {
           margin: 0 auto;
-          padding: 0 10px;
-          max-width: 300px;
+          
+          max-width: 740px;
         }
       }
     }
   }
 }
+
+@media screen and (min-width: 759.98px) and (max-width:991.98px) {
+  .main-container {
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .toTop {
+      left: 0;
+      position: relative;
+      margin: 50px auto;
+    }
+
+    .header {
+      font-size: 30px;
+      margin: 10px auto;
+      text-align: center;
+
+      h1 {
+        font-size: 50px;
+        margin-bottom: 20px;
+      }
+
+      hr {
+        display: none;
+      }
+    }
+
+    .contact-form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      
+
+      .contact-txt {
+        width: 100%;
+       
+        margin: 20px 0;
+        text-align: center;
+
+        h2 {
+          max-width: 500px;
+          margin: 0 auto;
+        }
+        p{
+          max-width: 500px;
+          margin: 10px auto;
+          
+        }
+
+        hr {
+          display: none;
+        }
+      }
+    }
+
+    .contact-formular {
+      display: flex;
+      max-width: 500px;
+
+      .nameValidation,
+      .emailValidation,
+      .messageValidation {
+        position: relative;
+        top: 5px;
+        left: 10px;
+      }
+
+      form {
+        max-width: 100%;
+        padding: 5px;
+
+        .checkbox {
+          position: relative;
+          right: 210px;
+          height: 19px;
+          width: 19px;
+          top: 48px;
+        }
+
+        input,
+        textarea {
+          width: 100%;
+          max-width: 500px;
+          margin: 10px auto;
+        }
+
+        .privacy-txt {
+          margin: 0 auto;
+          
+          max-width: 440px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 759.98px) {
+  .main-container {
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .toTop {
+      left: 0;
+      position: relative;
+      margin: 50px auto;
+    }
+
+    .header {
+      font-size: 30px;
+      margin: 10px auto;
+      text-align: center;
+
+      h1 {
+        font-size: 50px;
+        margin-bottom: 20px;
+      }
+
+      hr {
+        display: none;
+      }
+    }
+
+    .contact-form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .contact-txt {
+        width: 100%;
+        
+        margin: 20px 0px;
+        text-align: center;
+
+        h2 {
+          max-width: 400px;
+          margin: 0 auto;
+        }
+        p{
+          max-width: 400px;
+          margin: 10px auto;
+          
+        }
+
+        hr {
+          display: none;
+        }
+      }
+    }
+
+    .contact-formular {
+      display: flex;
+      max-width: 400px;
+
+      .nameValidation,
+      .emailValidation,
+      .messageValidation {
+        position: relative;
+        top: 5px;
+        left: 10px;
+      }
+
+      form {
+        max-width: 100%;
+        padding: 5px;
+
+        .checkbox {
+          position: relative;
+          right: 120px;
+          height: 19px;
+          width: 19px;
+          top: 48px;
+        }
+
+        input,
+        textarea {
+          width: 100%;
+          max-width: 400px;
+          margin: 10px auto;
+        }
+
+        .privacy-txt {
+          margin: 0 auto;
+          
+          max-width: 260px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 575.98px) {
+  .main-container {
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .toTop {
+      left: 0;
+      position: relative;
+      margin: 50px auto;
+    }
+
+    .header {
+      font-size: 30px;
+      margin: 10px auto;
+      text-align: center;
+
+      h1 {
+        font-size: 50px;
+        margin-bottom: 20px;
+      }
+
+      hr {
+        display: none;
+      }
+    }
+
+    .contact-form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      
+
+      .contact-txt {
+        width: 100%;
+       
+        
+        text-align: center;
+
+        h2 {
+          max-width: 280px;
+          margin: 0 auto;
+        }
+        p{
+          max-width: 280px;
+          margin: 10px auto;
+          font-size: 16px;
+          
+        }
+
+        hr {
+          display: none;
+        }
+      }
+    }
+
+    .contact-formular {
+      display: flex;
+      max-width: 400px;
+
+      .nameValidation,
+      .emailValidation,
+      .messageValidation {
+        position: relative;
+        top: 5px;
+        left: 10px;
+      }
+
+      form {
+        max-width: 100%;
+        padding: 5px;
+        .checkbox {
+          position: relative;
+          right: 118px;
+          height: 19px;
+          width: 19px;
+          top: 48px;
+        }
+
+        input,
+        textarea {
+          width: 100%;
+          max-width: 320px;
+          margin: 10px auto;
+        }
+
+        .privacy-txt {
+          margin: 0;
+          
+          max-width: 190px;
+        }
+      }
+    }
+  }
+}
+

@@ -1,7 +1,13 @@
 .main-section {
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   background-color: #141d2f;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  max-width: 1440px;
+  margin: 0 auto;
+  align-items: center;
 
   a {
     color: white;
@@ -14,7 +20,7 @@
     background-image: url("./../../../assets/img/Purple\ shadow\ 1.png");
     background-repeat: no-repeat;
     top: 150px;
-    left: -250px;
+
     bottom: 0;
     right: 0;
   }
@@ -28,7 +34,7 @@
     top: 150px;
     left: 0;
     bottom: 0;
-    right: -350px;
+
     z-index: 0;
   }
 
@@ -36,36 +42,47 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     position: relative;
     top: 150px;
-
+    //left: 30px;
+    margin: 0 auto;
+  
+    
     h1 {
       font-weight: bold;
       font-size: 150px;
       color: white;
       font-family: sans-serif;
+      margin: 0 auto;
+      display: flex; /* Hinzugefügt, um Flexbox zu verwenden */
+      align-items: baseline; /* Zentriert vertikal den Inhalt */
     }
-
     .rotate {
-      font-size: 70px;
+      font-size: 66px;
       display: inline-block;
       transform: rotate(-90deg);
-      word-spacing: 45px;
+      //word-spacing: 50px;
       position: relative;
-      top: 12px;
+      top: 2px;
+      //text-align: right;
+      //min-width: 120px;
     }
+
+   
   }
 
   h2 {
     font-size: 44px;
     color: #4b47ff;
-    margin-top: 10px;
+    margin: 10px 0;
+}
   }
 
   .talk-btn {
-    display: block;
-    margin: 170px auto;
+    display: inline-block;
+    padding: 15px, 30px, 15px, 30px;
+    margin: 190px auto;
     width: 165px;
     height: 58px;
     color: white;
@@ -94,11 +111,11 @@
   .links {
     display: flex;
     gap: 30px;
-    position: relative;
+
     z-index: 2;
 
     img {
-      width: 30px;
+      width: 35px;
       height: auto;
       transition: transform 0.3s ease;
 
@@ -112,65 +129,154 @@
     }
 
     hr {
-      width: 5%;
+      width: 100px;
       margin-left: 10px;
-      display: inline;
-      border: 1px solid white;
+      display: inline; 
+      border: 1px solid #00bee8;
       height: 0.9px;
       margin: 15px 0;
-      background-color: 00BEE8;
+      background-color: #00bee8;
+    }
+  }
+  .bottom-section {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    .scroll {
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: center;
+      gap: 60px;
+      align-items: center;
+      //margin-right: 430px;
+
+      span {
+        color: white;
+        font-size: 24px;
+        font-weight: 400;
+        transform: rotate(90deg);
+        z-index: 2;
+      }
+      .arrow {
+        opacity: 0;
+
+        transition: opacity 0.5s ease, top 0.5s ease;
+      }
+
+      @keyframes arrowAnimation {
+        0% {
+          top: -20px;
+          opacity: 0;
+        }
+        50% {
+          top: 10px;
+          opacity: 1;
+        }
+        100% {
+          top: 20px;
+          opacity: 0;
+        }
+      }
+
+      .arrow.animate {
+        animation: arrowAnimation 2s infinite;
+      }
     }
   }
 
-  .scroll {
-    display: flex;
-    position: relative;
-    justify-content: flex-end;
-    right: 120px;
 
-    span {
-      color: white;
-      font-size: 34px;
-      font-weight: 400;
-      transform: rotate(90deg);
-      z-index: 2;
-    }
-    .arrow {
-      opacity: 0;
+@media screen and (min-width: 320px) and (max-width: 576px) {
+  .main-section {
+    background-image: url("./../../../assets/img/Blue\ shadow\ 2.png");
+    background-position: calc(420px - 220px);
+    background-size: auto;
+    background-repeat: no-repeat;
+    height: 100vh;
+    
+
+    .talk-btn {
       position: relative;
-      top: -20px;
-      transition: opacity 0.5s ease, top 0.5s ease;
+      //top: 30px;
+      padding: 15px 30px 15px 30px;
     }
 
-    @keyframes arrowAnimation {
-      0% {
-        top: -20px;
-        opacity: 0;
-      }
-      50% {
-        top: 10px;
-        opacity: 1;
-      }
-      100% {
-        top: 20px;
-        opacity: 0;
-      }
+    &::before,
+    &::after {
+      content: none; // Entfernt das Pseudo-Element vollständig
+    }
+    .header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    // margin-top: 100px;
+
+    .rotate{
+      font-size: 25px;
+      word-spacing: 0;
+      bottom: 40px;
     }
 
-    .arrow.animate {
-      animation: arrowAnimation 2s infinite;
+      h1 {
+        font-size: 39px;
+        display: flex;
+        align-items: flex-start;
+      }
+
+      h2 {
+        position: relative;
+        top: 150px;
+        margin-bottom: 180px;
+        font-size: 22px;
+        margin-top: -140px;
+      }
+    }
+    .bottom-section {
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      flex-direction: column;
+      //gap: 20px;
+      margin-bottom: 90px;
+      margin-top: 0;
+      
+
+
+      .links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        
+
+        hr {
+          display: none;
+          background-color: #4b47ff;
+          width: 50%;
+        }
+      }
+
+      .scroll {
+        
+
+        .scroll-txt {
+          display: none;
+        }
+      }
     }
   }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (min-width: 576px) and (max-width: 767.98px) {
   .main-section {
     width: auto;
     height: 100vh;
     display: flex;
-    flex-direction: column;
-    gap: 30px;
 
+    ::before,
     ::after {
       content: none;
     }
@@ -181,7 +287,8 @@
       .rotate {
         font-size: 26px;
         word-spacing: 2px;
-        position: static;
+        position: relative;
+        top: -14px;
       }
 
       h1 {
@@ -196,58 +303,103 @@
   }
 }
 
-
-
-@media screen and (min-width: 360px) and (max-width: 520px) {
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
   .main-section {
-    background-image: url('./../../../assets/img/Blue\ shadow\ 2.png');
-    background-position: calc(420px - 220px) ;
-    background-size: auto;
-    background-repeat: no-repeat;
+    width: auto;
     height: 100vh;
+    display: flex;
 
-    &::before,
-    &::after {
-      content: none; // Entfernt das Pseudo-Element vollständig
+    ::before,
+    ::after {
+      content: none;
     }
+
     .header {
       display: flex;
-      justify-content: center;
-      align-items: center;
+
+      .rotate {
+        font-size: 26px;
+        word-spacing: 2px;
+        position: relative;
+        top: -14px;
+      
+      }
+
       h1 {
-        font-size: 41px;
+        font-size: 36px;
+        display: b;
       }
 
       h2 {
-        position: relative;
-        top: 150px;
-        margin-bottom: 180px;
-        font-size: 25px;
-        margin-top: -130px;
+        font-size: 30px;
       }
     }
+  }
+}
 
-    .links {
+@media screen and (min-width: 992px) and (max-width: 1199.98px) {
+  .main-section {
+    width: auto;
+    height: 100vh;
+    display: flex;
+
+    ::before,
+    ::after {
+      content: none;
+    }
+
+    .header {
       display: flex;
-      justify-content: center;
-      align-items: flex-end;
-      
 
-      hr {
-        display: none;
-        background-color: #4b47ff;
-        width: 50%;
+      .rotate {
+        font-size: 26px;
+        word-spacing: 2px;
+        position: relative;
+        top: -14px;
+      
+      }
+
+      h1 {
+        font-size: 36px;
+        display: b;
+      }
+
+      h2 {
+        font-size: 30px;
       }
     }
+  }
+}
 
-    .scroll {
-     position: relative;
-     margin: auto;
-     right: auto;
-     
+@media screen and (min-width: 1200px) and (max-width: 1440px){
+  .main-section {
+    width: auto;
+    height: 100vh;
+    display: flex;
 
-      .scroll-txt {
-        display: none;
+    ::before,
+    ::after {
+      content: none;
+    }
+
+    .header {
+      display: flex;
+
+      .rotate {
+        font-size: 26px;
+        word-spacing: 2px;
+        position: relative;
+        top: -14px;
+      
+      }
+
+      h1 {
+        font-size: 36px;
+        display: b;
+      }
+
+      h2 {
+        font-size: 30px;
       }
     }
   }

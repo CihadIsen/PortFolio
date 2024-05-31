@@ -1,14 +1,15 @@
 .main-container {
-  height: auto;
-  background-color: #1a2438;
+  height: 100%;
+  background-color: #141d2e;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 10px;
-  padding: 50px;
+  align-items: center;
+  justify-content: space-between;
   background-image: url("./../../../assets/img/GReen\ shadow.png");
   background-repeat: no-repeat;
   background-position: left;
+  max-width: 1440px;
+  margin: 30px auto;
 
   .projects {
     width: 100%;
@@ -17,17 +18,19 @@
     background-image: url("./../../../assets/img/Vector\ 4.png");
     background-repeat: no-repeat;
     background-position: left;
+    justify-content: space-between;
 
     .project-1,
     .project-2,
     .project-3 {
       display: flex;
-      align-items: center;
-      justify-content: space-around;
+      align-items: flex-start;
+      justify-content: space-between;
 
       img {
         width: 550px;
         height: 400px;
+        object-fit: contain;
       }
 
       .project-txt {
@@ -41,7 +44,7 @@
 
         p {
           font-size: 20px;
-          word-spacing: 12px;
+          //word-spacing: 12px;
           width: 600px;
         }
       }
@@ -108,7 +111,7 @@
 
   .header {
     text-align: center;
-   margin: 50px auto;
+    margin: 50px auto;
 
     /*hr {
       border: 2px solid #4b47ff;
@@ -132,114 +135,8 @@
     }
   }
 }
-@media screen and (min-width: 520px) and (max-width: 1200px){
 
-  .main-container{
-    display: flex;
-    background-image: none;
-    height: auto;
-
-    .projects{
-      display: flex;
-      background-image: none;
-
-      .join,
-      .portfolio {
-        display: flex;
-        flex-direction: column-reverse;
-        align-items: center;
-
-        h1 {
-          font-size: 50px;
-        }
-
-        .project-1,
-        .project-2,
-        .project-3 {
-          display: flex;
-          flex-direction: column-reverse;
-          margin-bottom: 0;
-
-          .btns {
-            display: flex;
-            justify-content: space-evenly;
-          }
-
-          .project-txt {
-            padding: 10px;
-            margin: 0 auto;
-
-            h1 {
-              font-size: 50px;
-            }
-
-            p {
-              width: auto;
-            }
-          }
-
-          img {
-            width: 250px;
-            height: 250px;
-          }
-        }
-      }
-      
-    }
-
-    .loco {
-      display: flex;
-      flex-direction: column; // Nur für loco
-      align-items: center;
-
-      .project-1,
-      .project-2,
-      .project-3 {
-        display: flex;
-        flex-direction: column; // Nur für loco
-
-        .btns {
-          display: flex;
-          justify-content: space-evenly;
-          
-        }
-
-        h1 {
-          font-size: 50px;
-        }
-
-        .project-txt {
-          padding: 10px;
-          margin: 0 auto;
-
-          h1 {
-            font-size: 50px;
-          }
-
-          p {
-            width: auto;
-          }
-        }
-
-        img {
-          width: 250px;
-          height: 250px;
-        }
-      }
-    }
-
-    .header {
-      margin-top: 50px;
-      text-align: center;
-      h1{
-        font-size: 55px;
-        text-align: center;
-      }
-    }
-  }
-}
-
-@media screen and (min-width: 360px) and (max-width: 520px) {
+@media screen and (min-width: 991.98px) and (max-width: 1440px) {
   .main-container {
     display: flex;
     background-image: none;
@@ -248,6 +145,12 @@
       h1 {
         font-size: 50px;
         margin-top: 50px;
+        margin-bottom: 20px;
+      }
+
+      p {
+        max-width: 800px;
+        margin: 0 auto;
       }
     }
     
@@ -272,6 +175,7 @@
           display: flex;
           flex-direction: column-reverse;
           margin-bottom: 0;
+          align-items: center;
 
           .btns {
             display: flex;
@@ -280,7 +184,7 @@
           }
 
           .project-txt {
-            padding: 10px;
+            padding: 5px;
             margin: 0 auto;
 
             h1 {
@@ -288,7 +192,8 @@
             }
 
             p {
-              width: auto;
+              max-width: 800px;
+              margin: 0 auto;
             }
           }
 
@@ -310,6 +215,7 @@
         .project-3 {
           display: flex;
           flex-direction: column; // Nur für loco
+          align-items: center;
 
           .btns {
             display: flex;
@@ -322,7 +228,7 @@
           }
 
           .project-txt {
-            padding: 10px;
+            padding: 5px;
             margin: 0 auto;
 
             h1 {
@@ -330,7 +236,372 @@
             }
 
             p {
-              width: auto;
+              max-width: 800px;
+              margin: 0 auto;
+            }
+          }
+
+          img {
+            width: 250px;
+            height: 250px;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  .main-container {
+    display: flex;
+    background-image: none;
+
+    .header {
+      h1 {
+        font-size: 50px;
+        margin-top: 50px;
+        margin-bottom: 20px;
+      }
+
+      p {
+        max-width: 500px;
+        margin: 0 auto;
+      }
+    }
+    
+
+    .projects {
+      display: flex;
+      background-image: none;
+      
+
+      .join,
+      .portfolio {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+
+        h1 {
+          font-size: 50px;
+        }
+
+        .project-1,
+        .project-2,
+        .project-3 {
+          display: flex;
+          flex-direction: column-reverse;
+          margin-bottom: 0;
+          align-items: center;
+
+          .btns {
+            display: flex;
+            justify-content: space-evenly;
+            gap: 10px;
+          }
+
+          .project-txt {
+            padding: 5px;
+            margin: 0 auto;
+
+            h1 {
+              font-size: 50px;
+            }
+
+            p {
+              max-width: 500px;
+              margin: 0 auto;
+            }
+          }
+
+          img {
+            width: 250px;
+            height: 250px;
+          }
+        }
+      }
+      
+
+      .loco {
+        display: flex;
+        flex-direction: column; // Nur für loco
+        align-items: center;
+
+        .project-1,
+        .project-2,
+        .project-3 {
+          display: flex;
+          flex-direction: column; // Nur für loco
+          align-items: center;
+
+          .btns {
+            display: flex;
+            justify-content: space-evenly;
+            gap: 10px;
+          }
+
+          h1 {
+            font-size: 50px;
+          }
+
+          .project-txt {
+            padding: 5px;
+            margin: 0 auto;
+
+            h1 {
+              font-size: 50px;
+            }
+
+            p {
+              max-width: 500px;
+              margin: 0 auto;
+            }
+          }
+
+          img {
+            width: 250px;
+            height: 250px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767.98px) {
+  .main-container {
+    display: flex;
+    background-image: none;
+
+    .header {
+      h1 {
+        font-size: 50px;
+        margin-top: 50px;
+        margin-bottom: 20px;
+      }
+
+      p {
+        max-width: 500px;
+        margin: 0 auto;
+      }
+    }
+    
+
+    .projects {
+      display: flex;
+      background-image: none;
+
+      .join,
+      .portfolio {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+
+        h1 {
+          font-size: 50px;
+        }
+
+        .project-1,
+        .project-2,
+        .project-3 {
+          display: flex;
+          flex-direction: column-reverse;
+          margin-bottom: 0;
+          align-items: center;
+
+          .btns {
+            display: flex;
+            justify-content: space-evenly;
+            gap: 10px;
+          }
+
+          .project-txt {
+            
+            margin: 0 auto;
+
+            h1 {
+              font-size: 50px;
+            }
+
+            p {
+              max-width: 500px;
+              margin: 0 auto;
+            }
+          }
+
+          img {
+            width: 250px;
+            height: 250px;
+          }
+        }
+      }
+      
+
+      .loco {
+        display: flex;
+        flex-direction: column; // Nur für loco
+        align-items: center;
+       
+
+        .project-1,
+        .project-2,
+        .project-3 {
+          display: flex;
+          flex-direction: column; // Nur für loco
+          align-items: center;
+
+          .btns {
+            display: flex;
+            justify-content: space-evenly;
+            gap: 10px;
+            
+          }
+
+          h1 {
+            font-size: 50px;
+          }
+
+          .project-txt {
+            padding: 5px;
+            margin: 0 auto;
+
+            h1 {
+              font-size: 50px;
+            }
+
+            p {
+              max-width: 500px;
+              margin: 0 auto;
+            }
+          }
+
+          img {
+            width: 250px;
+            height: 250px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (min-width: 320px) and (max-width: 575.98px) {
+  .main-container {
+    display: flex;
+    background-image: none;
+
+    .header {
+      h1 {
+        font-size: 45px;
+        margin-top: 50px;
+        margin-bottom: 20px;
+      }
+
+      p {
+        max-width: 280px;
+        margin: 0 auto;
+      }
+    }
+    
+
+    .projects {
+      display: flex;
+      background-image: none;
+
+      .join,
+      .portfolio {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+
+        h1 {
+          font-size: 45px;
+        }
+
+        .project-1,
+        .project-2,
+        .project-3 {
+          display: flex;
+          flex-direction: column-reverse;
+          margin-bottom: 0;
+          align-items: center;
+
+          .btns {
+            display: flex;
+            justify-content: space-evenly;
+            gap: 5px;
+
+            .github,
+            .test{
+              width: 120px;
+              height: 60px;
+            }
+            
+          }
+
+          .project-txt {
+           
+            margin: 0 auto;
+
+            h1 {
+              font-size: 50px;
+            }
+
+            p {
+              max-width: 280px;
+              margin: 0 auto;
+            }
+          }
+
+          img {
+            width: 250px;
+            height: 250px;
+          }
+        }
+      }
+      
+
+      .loco {
+        display: flex;
+        flex-direction: column; // Nur für loco
+        align-items: center;
+
+        .project-1,
+        .project-2,
+        .project-3 {
+          display: flex;
+          flex-direction: column; // Nur für loco
+          align-items: center;
+
+          .btns {
+            display: flex;
+            justify-content: space-evenly;
+            //gap: 5px;
+            margin: 10px auto;
+            max-width:280px;
+
+            .github,
+            .test{
+              width: 120px;
+              height: 60px;
+            }
+            
+          }
+
+          h1 {
+            font-size: 45px;
+          }
+
+          .project-txt {
+            padding: 5px;
+            margin: 0 auto;
+
+            h1 {
+              font-size: 50px;
+            }
+
+            p {
+              max-width: 260px;
+              margin: 0 auto;
             }
           }
 

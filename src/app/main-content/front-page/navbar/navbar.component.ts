@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, HostListener } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { CommonModule } from '@angular/common';
 import {
@@ -19,6 +19,8 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
   styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent implements OnInit {
+  @ViewChild('navbar') navbar!: ElementRef<HTMLDivElement>;
+
   @ViewChild('burgerAnimation') burgerAnimation: ElementRef | undefined;
   languages = ['en', 'de'];
 
@@ -26,6 +28,15 @@ export class NavbarComponent implements OnInit {
   animationStep = 0;
   animationDirection = 1;
 
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    const navbarElement = this.navbar.nativeElement;
+    if (window.pageYOffset > navbarElement.offsetTop) {
+      navbarElement.classList.add('fixed');
+    } else {
+      navbarElement.classList.remove('fixed');
+    }
+  }
   
   toggleMenu() {
     this.menuOpen = !this.menuOpen;
@@ -35,6 +46,8 @@ export class NavbarComponent implements OnInit {
       this.reverseAnimation();
     }
   }
+
+  
  
 
   startAnimation() {
@@ -82,5 +95,6 @@ export class NavbarComponent implements OnInit {
   changeLanguage(lang: string) {
     this.translateService.use(lang);
     localStorage.setItem('language', lang);
+    window.location.reload();
   }
 }

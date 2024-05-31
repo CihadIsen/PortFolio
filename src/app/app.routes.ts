@@ -4,6 +4,7 @@ import { ImpressumComponent } from './shared/impressum/impressum.component';
 import { PrivacyPolicyComponent } from './shared/privacy-policy/privacy-policy.component';
 
 
+
 export const routes: Routes = [
     { path: '', component: MainContentComponent },
     { path: 'impressum', component: ImpressumComponent},

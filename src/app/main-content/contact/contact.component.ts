@@ -67,9 +67,12 @@ export class ContactComponent implements OnInit {
   }
 
   isFormValid(ngForm: NgForm): boolean {
-    // Ensure the form and checkbox states are always boolean
     return !!ngForm.valid && this.isChecked;
 
+  }
+
+  toTop() {
+    window.scrollTo(0,0);
   }
 
   onSubmit(ngForm: NgForm) {
@@ -86,7 +89,6 @@ export class ContactComponent implements OnInit {
         .subscribe({
           next: (response) => {
             alert("Nachricht erfolgreich gesendet");
-            // Zurücksetzen des Formulars nach erfolgreichem Senden
             ngForm.resetForm();
           },
           error: (error) => {
